@@ -39,7 +39,11 @@ const Navbar = () => {
   return (
     <div>
         <Link href="/">Logo</Link>
-        <div></div>
+        <div>
+            {links.map(link =>
+                <Link key={link.id} href={link.url}>{link.title}</Link>
+            )}
+        </div>
     </div>
   )
 }
